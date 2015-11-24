@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Button.less'
+import '!style!css!sass!./Button.scss'
 
 var PropTypes = React.PropTypes
 

@@ -4,7 +4,7 @@ import React from 'react'
 import Button from './Button'
 import Parser from './Parser'
 
-import './Caculator.less'
+import '!style!css!sass!./Caculator.scss'
 
 export default React.createClass({
   getInitialState: function () {

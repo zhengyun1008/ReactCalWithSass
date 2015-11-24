@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'src/*.js', included: false},
-      {pattern: 'src/*.less', included: false},
+      {pattern: 'src/*.scss', included: false},
       {pattern: 'test/specs/**/*.js', included: false},
       'test/test-main.js'
     ],
@@ -40,7 +40,9 @@ module.exports = function(config) {
       module: {
         loaders: [
           { test: /\.js$/, loader: 'babel-loader' },
-          { test: /\.less$/, loader: "style!css!less" }
+          { test: /\.less$/, loader: "style!css!less" } ,
+          { test: /\.scss$/, loader: 'style!css!sass' },// SASS
+          { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' } // inline base64 URLs for <=8k images, direct URLs for the rest
         ]
       }
     },
